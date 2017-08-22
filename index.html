@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title> Ace Hotel </title>
+ <link rel="stylesheet" href="css/style.css"/>
+ <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+ <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
+     <script>
+
+     $(document).ready(function() {
+       $('a[href*=#]').each(function() {
+         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname
+         && this.hash.replace(/#/,'') ) {
+           var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+           var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+              var targetOffset = $target.offset().top;
+
+              $(this).click(function() {
+                 $("#nav li a").removeClass("active");
+                 $(this).addClass('active');
+                $('html, body').animate({scrollTop: targetOffset}, 1000);
+                return false;
+              });
+           }
+         }
+       });
+
+     });
+     </script>
+
+     <script>
+     // JavaScript for label effects only
+     	$(window).load(function(){
+     		$(".col-3 input").val("");
+
+     		$(".input-effect input").focusout(function(){
+     			if($(this).val() != ""){
+     				$(this).addClass("has-content");
+     			}else{
+     				$(this).removeClass("has-content");
+     			}
+     		})
+     	});
+     </script>
+     <Style>
+      div.gallery {
+        margin: 10px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 210px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+        background-color: gray;
+        opacity: 0.7;
+        color: #fff;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      </style>
+</head>
+
+<body>
+<!--- HEADER START--->
+<header id="header">
+  <div class="content">
+    <div id="logo"><a href=""> ACE Hotel </a></div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#Home" class="active" title="Next Section" > Home </a></li>
+          <li><a href="#About" title="Next Section"> About </a></li>
+          <li><a href="#Reservation" title="Next Section"> Reservation </a></li>
+          <li><a href="#Rooms" title="Next Section"> Rooms </a></li>
+        <li><a href="#Contact" title="Next Section"> Contact</a></li>
+        <li><a href="#Account"> Account </a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<body>
+
+  <!--- SLIDES START --->
+   <div id="Home">
+     <div class="content">
+        <div id="christmas_tree"> </div>
+           <h2> WELCOME</h2>
+           <h1> ACE HOTEL </h1>
+                <div id="divider"> </div>
+                   <h3> A world class hotel </h3>
+
+                 </div>
+        </div>
+
+   <div id="About">
+     <div class="content" >
+       <div class="quotes_container">
+         <h3 class="quotes">"Ace Hotel is the most trusted Hotel in the Philippines. Many tourist in the different country wants to stay in the hotel during their vacation."</h3>
+         <h4 class="author_name_gray"> Know us more </h4>
+       </div>
+     </div>
+   </div>
+
+   <div id="Reservation">
+     <div class="content-one">
+        <div class="quotes_container">
+          <h3 class="quotes">“Come and feel the relaxation at ACE Hotel” </h3>
+        </div>
+        <!-- Trigger/Open The Modal -->
+            <button id="myBtn"> Reserve Now </button>
+
+        <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                    <h2> RESERVE HERE </h2>
+              </div>
+              <div class="modal-body">
+                  <p>Some text in the Modal Body</p>
+                  <p>Some other text...</p>
+              </div>
+            </div>
+
+          </div>
+      </div>
+   </div>
+
+   <div id="Rooms">
+     <div class="content">
+       <div class="gallery">
+         <a target="_blank" href="image/room1.jpeg">
+           <img src="image/room1.jpeg" alt="Vintage Class Bedroom" width="300" height="200">
+         </a>
+            <div class="desc"> Vintage Class Bedroom </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room2.jpeg">
+            <img src="image/room2.jpeg" alt="Elegant Class Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Elegant Class Bedroom </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room3.jpg">
+            <img src="image/room3.jpg" alt="Blue and Gold Calm Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Blue and Gold Deluxe Bedroom </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room4.jpeg">
+            <img src="image/room4.jpeg" alt="White Double Deck Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> White Double Deck Bedroom </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room5.jpeg">
+            <img src="image/room5.jpeg" alt="Wooden Queen Size Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Wooden Queen Size Deluxe </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room6.jpg">
+            <img src="image/room6.jpg" alt="Black and Gray Bedspread Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Black and Gray Bedspread </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room7.jpeg">
+            <img src="image/room7.jpeg" alt="Black and Gray Bedspread Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Black and Gray Bedspread </div>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="image/room8.jpg">
+            <img src="image/room8.jpeg" alt="Black and Gray Bedspread Bedroom" width="300" height="200">
+          </a>
+            <div class="desc"> Black and Gray Bedspread </div>
+        </div>
+
+
+
+      </div>
+   </div>
+
+   <div id="Contact">
+     <div class="content">
+       <div class="quotes_container">
+         <h3 class="quotes">“Contact us now”</h3>
+       </div>
+       <div class="container">
+         <!-- <form action="" method="POST">
+           <div class="col-3 input-effect">
+             <input class="effect-16" type="text" placeholder="">
+                <label>First Name</label>
+                  <span class="focus-border"></span>
+          </div>
+          <div class="col-3 input-effect">
+            <input class="effect-17" type="text" placeholder="">
+               <label>Middle Name</label>
+                 <span class="focus-border"></span>
+         </div>
+         <div class="col-3 input-effect">
+           <input class="effect-18" type="text" placeholder="">
+              <label>Middle Name</label>
+                <span class="focus-border"></span>
+        </div>
+        <div class="col-50 input-effect">
+        	<textarea class="effect-19" rows="4" cols="50" name="comment" placeholder="">
+            <label> Comment </label>
+            <span class="focus-border"></span>
+          </textarea>
+        </div>
+         </form> -->
+       </div>
+     </div>
+   </div>
+
+   <div id="footer">
+     <div class="container-fluid">
+       <h4>Special Thanks to</h4>
+         <p>w3school.com</p>
+         <p>materialize.com</p>
+         <p>pexels.com</p>
+         <p>pixabay.com</p>
+
+         <input type="button" class="button" value="More">
+     </div>
+     <div class="container">
+       <h4> About </h4>
+         <p> Ace Hotel was established in 2017.Ace Hotel is the most trusted Hotel in the Philippines. Many tourist in the different country wants to stay in the hotel during their vacation.</p>
+
+         <input type="Button" class="Button" value=" Read More">
+     </div
+     <a href="https://1stwebdesigner.com/"> &copy;AceHotel.Com </a>
+ </div>
+        <!-- <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <th colspan="4"> Special thanks to </th>
+              <th colspan="2"> About </th>
+            </tr>
+            <tr>
+            </tr>
+          </table>
+        </div>
+      <a href="https://1stwebdesigner.com/"> &copy;AceHotel.Com </a>
+   </div> -->
+   </div>
+   <!--- SLIDES END --->
+
+   <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

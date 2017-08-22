@@ -1,0 +1,603 @@
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+}
+h1 {
+	font-family:"Arvo";
+	font-weight:normal;
+	font-size:3.4375em;
+	text-align:center;
+	color:#ffffff;
+	margin:0;
+	padding:0;
+}
+h2 {
+	font-family:"Arvo";
+	font-weight:normal;
+	font-size: 2.5em;
+	text-align:center;
+	color:#ffffff;
+	margin:0;
+	padding:0;
+}
+
+h3 {
+	font-family:Oswald;
+	font-weight:normal;
+	font-size: 1em;
+	text-align:center;
+	margin: 0.3125em 0;
+	padding:0;
+	z-index:1;
+	position:relative;
+}
+
+.center {
+	margin:0 auto;
+}
+.content {
+	margin:0 auto;
+	width: 60em;
+}
+
+.content-one{
+	margin-top: 3.125em;
+	margin-left: 6.25em;
+	width: 25em;
+}
+.clear {
+	clear:both;
+}
+a.lpanel {
+	float:left;
+	color:#e1e1e1;
+	font-size: 0.75em;
+	font-family:"Wellfleet";
+	text-decoration:none;
+	margin: 0.4375em 0.6875em;
+}
+a.rpanel {
+	float:right;
+	color:#e1e1e1;
+	font-size: 0.75em;
+	font-family:"Wellfleet";
+	text-decoration:none;
+	margin: 0.4375em 0.6875em;
+}
+a.lpanel:hover {
+	color:#fff;
+}
+a.rpanel:hover {
+	color:#fff;
+}
+#header {
+	width:100%;
+	background-color: #008b8b;
+	height: 5em;
+	position:fixed;
+	margin: 0 auto;
+	opacity: 0.7;
+}
+#nav {
+	float:right;
+	margin-top: 0.9375em;
+}
+
+#logo a {
+	text-decoration:none;
+	float:left;
+	margin-top: 0.9375em;
+	margin-left: -12.5em;
+	color: #fff;
+	font-size: 1.875em;
+	font-family:"Wellfleet";
+	font-weight:bold;
+}
+#nav ul {
+	list-style:none;
+	display:block;
+	margin:0 auto;
+}
+#nav li {
+	margin-top: 0.5625em;
+	float:left;
+	padding-left: 0.9375em;
+}
+#nav li a {
+	color:#fff;
+	font-size: 1em;
+	text-decoration:none;
+	font-family:'Wellfleet';
+}
+#nav li a.active {
+	color: #000000;
+	opacity:1;
+	border-bottom: 0.125em solid #9e9e9e;
+}
+#nav li a:hover {
+	color: #fff;
+	opacity:1;
+}
+.quotes {
+	font-family:'Goudy Bookletter 1911',serif;
+	font-weight:normal;
+	font-size: 1.875em;
+	text-align:left;
+	margin: 3.125em auto;
+}
+.author_name_white {
+	font-family:"Wellfleet";
+	margin: 4.375em 0 0 4.6875em;
+	color:#fff;
+	font-size: 1.25em;
+}
+.author_name_gray {
+	font-family:"Wellfleet";
+	margin:70px 0 0 75px;
+	color:#94a4a4;
+	font-size:20px;
+}
+.quotes_container {
+	width:800px;
+	margin:0 auto;
+}
+#divider {
+	background-image:url("d.png") no-repeat;
+	width:300px;
+	height:35px;
+	margin:0px auto 27px auto;
+	z-index: -1;
+}
+button.btn-know {
+	padding:15px 47px;
+	margin:40px 38.8%;
+	text-align:center;
+	border:4px solid #fff;
+	color:#fff;
+	/*background:transparent*/
+	font-size:19px;
+	cursor:pointer;
+	text-shadow:-1px 2px 0px rgba(90,90,90,0.56);
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+.btn-know:hover {
+	background:#fff;
+	color:transparent;
+}
+ul.built {
+	list-style:none;
+	margin:0 auto;
+	width:730px;
+}
+.built li img {
+	float:left;
+	padding-right:34px;
+}
+#Home,#About {
+	width:100%;
+}
+
+/*Create Parallax Effect*/
+#Home, #Reservation, #Contact {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#Home {
+	background-image: url("home.jpeg");
+	color:#ffffff;
+	min-height: 600px;
+	margin:0;
+	padding:200px 0 260px 0;
+}
+#About {
+	background-color:#fff;
+	color:#000000;
+	min-height: 400px;
+	margin:0 auto;
+	overflow:hidden;
+	padding:200px 0;
+}
+#Reservation {
+	background-image: url("reservation.jpeg");
+	color:#fff;
+	min-height:600px;
+	padding:200px 0 260px 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */>
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #00b3b3;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+	}
+
+.modal-header h2{
+    color: #00b3b3;
+		font-family: 'Roboto', sans-serif;
+}
+
+.modal-body {
+		padding: 2px 16px;
+		color: gray;
+}
+
+#myBtn{
+	background-color: #008b8b;
+	width: 300px;
+	height: 60px;
+	border: none;
+	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	margin-left: 120px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	color: #fff;
+	cursor: pointer;
+	opacity: 0.7;
+}
+#myBtn:hover{
+	background-color: gray;
+	color: #fff;
+	cursor: pointer;
+}
+#Rooms {
+	background-color:#fff;
+	color:#333333;
+	min-height:600px;
+	padding:200px 0;
+}
+#Contact {
+	background-image: url("contact.jpeg");
+	min-height:400px;
+	margin:0 auto;
+	padding:250px 0;
+	color:#000000;
+	font-family: 'Roboto',sans-serif;
+
+}
+.container {
+	background-color: #ffffff;
+	width: 700px;
+	height: 600px;
+	margin-top: -200px;
+	margin-left: 400px;
+	z-index:1;
+	opacity: 0.7;
+}
+
+
+/*Input Effects*/
+.col-3 {
+	float: left;
+	width: 27.33%;
+	margin: 60px 3%;
+	position: relative;
+	}
+
+	/* necessary to give position: relative to parent. */
+input[type="text"]{
+	font: 15px/24px "Lato", Arial, sans-serif;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+.effect-16 {
+	border: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.effect-16 ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #00b3b3;
+	transition: 0.4s;
+}
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
+.effect-16 ~ label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-16:focus ~ label, .has-content.effect-16 ~ label {
+	top: -16px;
+	font-size: 12px;
+	color: #000;
+	transition: 0.3s;
+}
+
+/*Middle Name */
+.effect-17 {
+	border: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.effect-17 ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #00b3b3;
+	transition: 0.4s;
+}
+.effect-17:focus ~ .focus-border,
+.has-content.effect-17 ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
+.effect-17 ~ label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-17:focus ~ label, .has-content.effect-17 ~ label {
+	top: -17px;
+	font-size: 12px;
+	color: #000;
+	transition: 0.3s;
+}
+
+/*Last Name*/
+.effect-18 {
+	border: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.effect-18 ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #00b3b3;
+	transition: 0.4s;
+}
+.effect-18:focus ~ .focus-border,
+.has-content.effect-18 ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
+.effect-18 ~ label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-18:focus ~ label, .has-content.effect-18 ~ label {
+	top: -17px;
+	font-size: 12px;
+	color: #000;
+	transition: 0.3s;
+}
+
+/*Textarea*/
+.col-50 {
+	float: left;
+	width: 90%;
+	margin: 60px 3%;
+	position: relative;
+	}
+	/* necessary to give position: relative to parent. */
+textarea[name="comment"]{
+	font: 15px/24px "Lato", Arial, sans-serif;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+.effect-19 {
+	border: 1px solid #ccc;
+	padding: 7px 14px;
+	transition: 0.4s;
+	background: transparent;
+}
+
+.effect-19 ~ .focus-border:before,
+.effect-19 ~ .focus-border:after {
+	content: "";
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: #3399FF;
+	transition: 0.4s;
+}
+
+.effect-19 ~ .focus-border:after {
+	top: auto;
+	bottom: 0;
+}
+
+.effect-19 ~ .focus-border i:before,
+.effect-19 ~ .focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #00b3b3;
+	transition: 0.6s;
+}
+
+.effect-19 ~ .focus-border i:after {
+	left: auto;
+	right: 0;
+}
+.effect-19:focus ~ .focus-border:before,
+.effect-19:focus ~ .focus-border:after,
+.has-content.effect-19 ~ .focus-border:before,
+.has-content.effect-19 ~ .focus-border:after {
+	left: 0;
+	width: 100%;
+	transition: 0.4s;
+}
+.effect-19:focus ~ .focus-border i:before,
+.effect-19:focus ~ .focus-border i:after,
+.has-content.effect-19 ~ .focus-border i:before,
+.has-content.effect-19 ~ .focus-border i:after {
+	top: -1px;
+	height: 100%;
+	transition: 0.6s;
+}
+
+.effect-19 ~ label {
+	position: absolute;
+	left: 14px;
+	width: 100%;
+	top: 10px;
+	color: #000;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+
+.effect-19:focus ~ label, .has-content.effect-19 ~ label {
+	top: -18px;
+	left: 0;
+	font-size: 12px;
+	color: #00b3b3;
+	transition: 0.3s;
+}
+
+#footer {
+	background-color: #008b8b;
+	min-height: 300px;
+	font-family:"Wellfleet";
+	font-size:14px;
+	text-align:center;
+	text-decoration:none;
+	color: white;
+	opacity: 0.8;
+}
+
+#footer .container-fluid {
+	background-color:#008b8b;
+	width: 300px;
+	height: 200px;
+	color: #fff;
+	text-align: left;
+	margin-top: -20px;
+	margin-left: 200px;
+	margin-bottom: 50px;
+}
+
+.button {
+    background-color: #00cccc;
+    border: none;
+		box-shadow: 4px 4px 4px rgba(68,68,68,0.6);
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#footer .container {
+	background-color:#008b8b;
+	width: 300px;
+	height: 200px;
+	color: #fff;
+	text-align: left;
+	margin-top: -250px;
+	margin-left: 600px;
+	margin-bottom: 50px;
+}
+
+.Button {
+    background-color: #00cccc;
+    border: none;
+		box-shadow: 4px 4px 4px rgba(68,68,68,0.6);
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
